@@ -18,7 +18,6 @@ const baseColors = {
   black: "#000",
   white: "#fff",
 
-
   backgroundHomeAccent: '#02749ea7',
   backgroundHomeSecond: '#d7d7d7',
 
