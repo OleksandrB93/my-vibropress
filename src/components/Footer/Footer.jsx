@@ -6,7 +6,6 @@ export default function Footer() {
   return (
     <FooterContainer>
         <FooterInfo/>
-        
     </FooterContainer>
   );
 }
