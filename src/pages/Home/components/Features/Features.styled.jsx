@@ -8,7 +8,7 @@ export const FeaturesContainer = styled.div`
   grid-template-columns: 370px 370px 370px;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: #02749ea7;
+  background-color: ${p=>p.theme.colors.backgroundHomeAccent};
 
   @media (max-width: 1200px) {
     grid-gap: 30px;
@@ -33,7 +33,7 @@ export const FeaturesItem = styled.div`
   padding: 10px;
   width: 350px;
   border-radius: 15px;
-  background-color: #d7d7d7;
+  background-color: ${p=>p.theme.colors.backgroundHomeSecond};
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
   transition: all 0.3s ease-in-out;
   @media (max-width: 768px) {
@@ -44,7 +44,7 @@ export const FeaturesItem = styled.div`
   }
 
   &:hover {
-    background: linear-gradient(to right, #d7d7d7, #ff8900);
+    background-color:${p=>p.theme.colors.accent};
     background-size: 400% 400%;
     animation: gradient 1s ease-in-out forwards;
     transform: translateY(-5px);

@@ -31,7 +31,7 @@ export const LocitionContainer = styled.div`
 
 export const GoogleMap = styled.iframe`
   border-radius: 15px;
-  border: 1px solid #ff8900;
+  border: 1px solid ${(p) => p.theme.colors.accent};
   box-shadow: rgba(38, 57, 77, 0.337) 0px 20px 30px -10px;
 
   @media (max-width: 768px) {
@@ -44,7 +44,7 @@ export const GoogleMap = styled.iframe`
 
 export const AddressFooter = styled.address`
   font-size: 15px;
-  color: #000000ba;
+  color: ${p=>p.theme.colors.black};
   text-align: center;
 `;
 
@@ -62,7 +62,7 @@ export const ContactContainer = styled.div`
     justify-content: center;
     align-items: center;
     /* padding: 6px; */
-    color: black;
+    color: ${p=>p.theme.colors.black};
     text-decoration: none;
   }
 `;

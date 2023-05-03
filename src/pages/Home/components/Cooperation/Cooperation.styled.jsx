@@ -15,7 +15,6 @@ export const CooperationContainer = styled.div`
   padding-top: 0;
   display: flex;
   justify-content: center;
-  /* background-color: #02749e; */
 `;
 
 export const CooperationSlide = styled(SwiperSlide)`
@@ -23,13 +22,12 @@ export const CooperationSlide = styled(SwiperSlide)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #d7d7d7;
+  background-color: ${p=>p.theme.colors.backgroundHomeSecond};
   border-radius: 15px;
   height: 200px;
 
   p {
     margin-top: 10px;
     text-align: center;
-    /* color: #02749e; */
   }
 `;

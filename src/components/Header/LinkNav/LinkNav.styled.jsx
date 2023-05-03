@@ -25,7 +25,7 @@ export const NavContainer = styled.div`
 
     padding-top: 80px;
     box-shadow: -5px 0 5px rgba(0, 0, 0, 0.596);
-    background-color: #c7c7c7;
+    background-color: ${(p) => p.theme.colors.backgfoundTablet};
     > *:last-child {
       display: flex;
     }
@@ -37,12 +37,12 @@ export const DropList = styled.ul`
   top: 140%;
   left: 50%;
   transform: translateX(-50%);
-    overflow-y: auto;
+  overflow-y: auto;
 
   list-style: none;
   display: flex;
-  color: black;
-  background-color: #5f5f5fd5;
+  color: ${(p) => p.theme.colors.accentedTextDark};
+  background-color: ${(p) => p.theme.colors.link};
   backdrop-filter: blur(5px);
   border-radius: 9px;
   z-index: 999;
@@ -53,7 +53,6 @@ export const DropList = styled.ul`
     transform: translateX(-50%);
     display: grid;
     width: 95vw;
-    background-color: #c7c7c7d4;
   }
   @media (max-width: 888.98px) {
     top: 17%;
@@ -70,7 +69,7 @@ export const StyledDropdownItem = styled.li`
   align-items: center;
 
   font-size: 15px;
-  background-color: #c7c7c7;
+  background-color: ${(p) => p.theme.colors.backgfoundTablet};
   border-radius: 7px;
   transition: all 0.2s ease-in-out;
   border: 2px solid gray;
@@ -95,10 +94,10 @@ export const StyledDropdownItem = styled.li`
   }
 
   &:hover {
-    background: linear-gradient(to bottom right, #4c4c4c, #4c4c4c);
-    color: orange;
+    background: ${(p) => p.theme.colors.darkGradientMenu};
+    color: ${(p) => p.theme.colors.accent};
     border-radius: 7px;
-    border: 2px solid orange;
+    border: 2px solid ${(p) => p.theme.colors.accent};
   }
 `;
 
@@ -110,12 +109,11 @@ export const LinkContainer = styled(NavLink)`
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
-  color: black;
+  color: ${(p) => p.theme.colors.accentedTextDark};
   padding: ${({ isscrolled }) => (isscrolled ? "19px" : "40px")} 5px;
   opacity: 1;
   margin-right: 10px;
   transition: padding 250ms ease-out;
-
 
   @media (max-width: 888.98px) {
     width: 200px;
@@ -124,12 +122,12 @@ export const LinkContainer = styled(NavLink)`
   }
 
   &:hover {
-    background-color: #383737;
+    background-color: ${(p) => p.theme.colors.link};
     border-radius: 0px;
   }
   &:hover:not(.active),
   &:focus-visible:not(.active) {
-    color: #ff8900;
+    color: ${(p) => p.theme.colors.accent};
     &:before {
       transform: scaleX(0.8);
       box-shadow: 0px -1px 70px 1px black;
@@ -137,13 +135,13 @@ export const LinkContainer = styled(NavLink)`
   }
 
   &.active {
-    color: #ff8900;
-    background-color: #4c4c4c;
+    color: ${(p) => p.theme.colors.accent};
+    background-color: ${(p) => p.theme.colors.link};
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 0px;
   }
   &.active:before {
-    border-color: #ff8900;
+    border-color: ${(p) => p.theme.colors.accent};
   }
 `;
 
@@ -155,13 +153,13 @@ export const LinkContainerProd = styled.div`
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
-  color: black;
+  color: ${(p) => p.theme.colors.accentedTextDark};
   padding: ${({ isscrolled }) => (isscrolled ? "19px" : "40px")} 15px;
   opacity: 1;
   margin-right: 10px;
   transition: padding 250ms ease-out;
   :hover {
-    background-color: #383737;
+    background-color: ${(p) => p.theme.colors.link};
     box-shadow: rgba(255, 166, 0, 0.841) 0px 5px 15px;
     border-radius: 0px;
   }
@@ -190,7 +188,7 @@ export const LinkContainerProd = styled.div`
 
   &:hover:not(.active),
   &:focus-visible:not(.active) {
-    color: #ff8900;
+    color: ${(p) => p.theme.colors.accent};
     &:before {
       transform: scaleX(0.8);
       box-shadow: 0px -1px 70px 1px black;
@@ -198,12 +196,12 @@ export const LinkContainerProd = styled.div`
   }
 
   &.active {
-    color: #ff8900;
+    color: ${(p) => p.theme.colors.accent};
     background-color: #020202;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
   }
   &.active:before {
-    border-color: #ff8900;
+    border-color: ${(p) => p.theme.colors.accent};
   }
 `;

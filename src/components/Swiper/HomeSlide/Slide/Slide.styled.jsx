@@ -6,7 +6,7 @@ export const SlideText = styled.p`
   left: 50%;
   transform: translate(-50%, -100%)
     scale(${props => (props.isActive ? '1' : '0')});
-  color: #ff8900;
+  color: ${(p) => p.theme.colors.accent};
   font-size: 30px;
   font-weight: bold;
   background-color: #00000094;

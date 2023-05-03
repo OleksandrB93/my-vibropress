@@ -1,8 +1,6 @@
 import { SiTelegram } from 'react-icons/si';
 import { BsTelephoneFill } from 'react-icons/bs';
 import { MdMarkEmailUnread } from 'react-icons/md';
-// import { NavLink } from 'react-router-dom';
-
 import { ContactContainer } from '../Footer/FooterInfo/FooterInfo.styled';
 
 export default function Contact() {
