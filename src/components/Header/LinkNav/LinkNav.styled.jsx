@@ -51,6 +51,8 @@ export const DropList = styled.ul`
     border-radius: 0;
     display: flex;
     justify-content: space-evenly;
+    background-color: ${(p) => p.theme.colors.backgfoundTablet};
+    border-radius: 5px;
   }
 
   @media (max-width: 888.98px) {
@@ -68,38 +70,56 @@ export const StyledDropdownItem = styled.li`
   align-items: center;
 
   font-size: 15px;
-  background-color: ${(p) => p.theme.colors.backgfoundTablet};
-  border-radius: 7px;
   transition: all 0.2s ease-in-out;
-  border: 2px solid gray;
   white-space: nowrap;
-  @media (max-width: 480.98px) {
-    font-size: 12px;
-    margin: 0 3px;
-    padding: 5px;
 
+  @media (max-width: 480.98px) {
+
+    font-size: 12px;
+    margin: 0;
+    
     width: 60px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 10px;
+    border:1px solid ${p=>p.theme.colors.accent};
+    
+    &.active {
+      background: ${(p) => p.theme.colors.link};
+      transform: translateY(63%);
+      fill: ${(p) => p.theme.colors.accent};
+      border-radius: 30%;
+    border:2px solid ${p=>p.theme.colors.white};
+
+
+      span {
+        transition: transform 0.4s ease-in-out;
+      }
+
+      p {
+        opacity: 1;
+        pointer-events: auto;
+        position: absolute;
+        background: ${(p) => p.theme.colors.darkGradientMenu};
+        color: ${(p) => p.theme.colors.accent};
+        border-radius: 7px;
+        border: 2px solid ${(p) => p.theme.colors.white};
+        background-color: ${(p) => p.theme.colors.link};
+        padding: 3px 9px;
+        font-size: 16px;
+        border-radius: 10px;
+        transition: transform 0.4s ease-in-out;
+        transform: translate(-50%, 0%);
+      }
+    }
 
     p {
       position: absolute;
-      background-color: ${(p) => p.theme.colors.link};
-      padding: 7px 9px;
-      font-size: 16px;
-      border-radius: 10px;
-
       top: 110%;
       left: 50%;
-      transform: translateX(-50%);
-      transition: opacity 0.2s ease-in-out;
+      transform: translate(-50%, 10%);
       opacity: 0;
       pointer-events: none;
-    }
-
-    &:hover p {
-      opacity: 1;
-      pointer-events: auto;
+      transition: opacity 0s ease-in-out, transform 0.4s ease-in-out;
     }
   }
 
@@ -115,13 +135,6 @@ export const StyledDropdownItem = styled.li`
 
   &:last-of-type {
     margin-right: 0;
-  }
-
-  &:hover {
-    background: ${(p) => p.theme.colors.darkGradientMenu};
-    color: ${(p) => p.theme.colors.accent};
-    border-radius: 7px;
-    border: 2px solid ${(p) => p.theme.colors.accent};
   }
 `;
 
