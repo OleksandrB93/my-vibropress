@@ -53,6 +53,20 @@ export const DropList = styled.ul`
     justify-content: space-evenly;
     background-color: ${(p) => p.theme.colors.backgfoundTablet};
     border-radius: 5px;
+
+    .circle {
+      position: absolute;
+      top: 34%;
+      left: 3%;
+      width: 60px;
+      height: 60px;
+      background-color: ${(p) => p.theme.colors.accent};
+      border: 6px solid ${(p) => p.theme.colors.black};
+      /* z-index: ; */
+
+      border-radius: 50%;
+      transition: transform 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
   }
 
   @media (max-width: 888.98px) {
@@ -74,24 +88,19 @@ export const StyledDropdownItem = styled.li`
   white-space: nowrap;
 
   @media (max-width: 480.98px) {
-
     font-size: 12px;
     margin: 0;
-    
+
     width: 60px;
     height: 60px;
-    border-radius: 10px;
-    border:1px solid ${p=>p.theme.colors.accent};
-    
     &.active {
-      background: ${(p) => p.theme.colors.link};
-      transform: translateY(63%);
-      fill: ${(p) => p.theme.colors.accent};
-      border-radius: 30%;
-    border:2px solid ${p=>p.theme.colors.white};
-
-
       span {
+        padding: 10px;
+        background: ${(p) => p.theme.colors.link};
+        fill: ${(p) => p.theme.colors.accent};
+        border-radius: 30%;
+        border: 2px solid ${(p) => p.theme.colors.white};
+        transform: translateY(35%);
         transition: transform 0.4s ease-in-out;
       }
 
@@ -101,12 +110,11 @@ export const StyledDropdownItem = styled.li`
         position: absolute;
         background: ${(p) => p.theme.colors.darkGradientMenu};
         color: ${(p) => p.theme.colors.accent};
-        border-radius: 7px;
         border: 2px solid ${(p) => p.theme.colors.white};
+        border-radius: 10px;
         background-color: ${(p) => p.theme.colors.link};
         padding: 3px 9px;
         font-size: 16px;
-        border-radius: 10px;
         transition: transform 0.4s ease-in-out;
         transform: translate(-50%, 0%);
       }
@@ -114,7 +122,7 @@ export const StyledDropdownItem = styled.li`
 
     p {
       position: absolute;
-      top: 110%;
+      top: 140%;
       left: 50%;
       transform: translate(-50%, 10%);
       opacity: 0;
@@ -122,7 +130,6 @@ export const StyledDropdownItem = styled.li`
       transition: opacity 0s ease-in-out, transform 0.4s ease-in-out;
     }
   }
-
   @media (max-width: 888.98px) {
     font-size: 12px;
     margin: 0 3px;
