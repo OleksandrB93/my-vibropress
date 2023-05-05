@@ -37,7 +37,6 @@ export const DropList = styled.ul`
   top: 140%;
   left: 50%;
   transform: translateX(-50%);
-  overflow-y: auto;
 
   list-style: none;
   display: flex;
@@ -47,15 +46,15 @@ export const DropList = styled.ul`
   border-radius: 9px;
   z-index: 999;
 
-  @media (max-width: 700.98px) {
-    top: 12%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: grid;
-    width: 95vw;
+  @media (max-width: 480.98px) {
+    width: 100vw;
+    border-radius: 0;
+    display: flex;
+    justify-content: space-evenly;
   }
+
   @media (max-width: 888.98px) {
-    top: 17%;
+    top: 12%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -78,7 +77,32 @@ export const StyledDropdownItem = styled.li`
     font-size: 12px;
     margin: 0 3px;
     padding: 5px;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    p {
+      position: absolute;
+      background-color: ${(p) => p.theme.colors.link};
+      padding: 7px 9px;
+      font-size: 16px;
+      border-radius: 10px;
+
+      top: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: opacity 0.2s ease-in-out;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &:hover p {
+      opacity: 1;
+      pointer-events: auto;
+    }
   }
+
   @media (max-width: 888.98px) {
     font-size: 12px;
     margin: 0 3px;
