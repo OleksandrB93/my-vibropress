@@ -6,7 +6,7 @@ export const SliderContainer = styled.div`
   left: 0;
   height: 500px;
   width: 100vw;
-background: ${(p) => p.theme.colors.footerBackground};
+  background: ${(p) => p.theme.colors.sliderBackground};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,7 +33,7 @@ background: ${(p) => p.theme.colors.footerBackground};
   .swiper-button-next {
     font-style: normal;
     color: ${(p) => p.theme.colors.accent};
-    background-color: ${p=>p.theme.colors.black};
+    background-color: ${(p) => p.theme.colors.black};
     margin-right: 30px;
     width: 50px;
     height: 70px;
@@ -48,8 +48,8 @@ background: ${(p) => p.theme.colors.footerBackground};
   }
   .swiper-button-prev {
     font-style: normal;
-    color:  ${(p) => p.theme.colors.accent};
-    background-color: ${p=>p.theme.colors.black};
+    color: ${(p) => p.theme.colors.accent};
+    background-color: ${(p) => p.theme.colors.black};
     margin-left: 30px;
     width: 50px;
     height: 70px;
@@ -95,8 +95,8 @@ background: ${(p) => p.theme.colors.footerBackground};
     font-size: 14px;
     text-align: center;
     text-decoration: none;
-    color: ${p=>p.theme.colors.black};
-    background-color: ${p=>p.theme.colors.white};
+    color: ${(p) => p.theme.colors.black};
+    background-color: ${(p) => p.theme.colors.white};
 
     @media (max-width: 480.98px) {
       margin-top: 40px;

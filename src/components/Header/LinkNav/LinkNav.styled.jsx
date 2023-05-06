@@ -51,22 +51,10 @@ export const DropList = styled.ul`
     border-radius: 0;
     display: flex;
     justify-content: space-evenly;
-    background-color: ${(p) => p.theme.colors.backgfoundTablet};
+    background-color: ${(p) => p.theme.colors.mobileMenuBackground};
     border-radius: 5px;
-
-    .circle {
-      position: absolute;
-      top: 34%;
-      left: 3%;
-      width: 60px;
-      height: 60px;
-      background-color: ${(p) => p.theme.colors.accent};
-      border: 6px solid ${(p) => p.theme.colors.black};
-      /* z-index: ; */
-
-      border-radius: 50%;
-      transition: transform 0.3s ease-in-out, left 0.3s ease-in-out;
-    }
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   }
 
   @media (max-width: 888.98px) {
@@ -93,41 +81,53 @@ export const StyledDropdownItem = styled.li`
 
     width: 60px;
     height: 60px;
+
+    span {
+      padding: 9px;
+      border-radius: 5%;
+      fill: ${(p) => p.theme.colors.accentSecondary};
+      background: ${(p) => p.theme.colors.backgroundAccent};
+      transition: all 0.3s ease-in-out;
+    }
     &.active {
       span {
         padding: 10px;
-        background: ${(p) => p.theme.colors.link};
-        fill: ${(p) => p.theme.colors.accent};
         border-radius: 30%;
-        border: 2px solid ${(p) => p.theme.colors.white};
-        transform: translateY(35%);
-        transition: transform 0.4s ease-in-out;
+        fill: ${(p) => p.theme.colors.black};
+        background: ${(p) => p.theme.colors.accent};
+        transform: translateY(25%);
+        transition: all 0.3s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
+          rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+          rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
       }
 
       p {
-        opacity: 1;
         pointer-events: auto;
         position: absolute;
-        background: ${(p) => p.theme.colors.darkGradientMenu};
-        color: ${(p) => p.theme.colors.accent};
-        border: 2px solid ${(p) => p.theme.colors.white};
         border-radius: 10px;
-        background-color: ${(p) => p.theme.colors.link};
-        padding: 3px 9px;
+        padding: 3px 12px;
         font-size: 16px;
-        transition: transform 0.4s ease-in-out;
+        color: ${(p) => p.theme.colors.black};
+        background-color:  ${(p) => p.theme.colors.accent};
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
+          rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+          rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+        opacity: 1;
         transform: translate(-50%, 0%);
+        transition: transform 0.4s ease-in-out;
       }
     }
 
     p {
-      position: absolute;
-      top: 140%;
-      left: 50%;
-      transform: translate(-50%, 10%);
-      opacity: 0;
       pointer-events: none;
-      transition: opacity 0s ease-in-out, transform 0.4s ease-in-out;
+      position: absolute;
+      top: 145%;
+      left: 50%;
+      opacity: 0;
+      transform: translate(-50%, 10%);
+      transition: transform 0.4s ease-in-out;
     }
   }
   @media (max-width: 888.98px) {

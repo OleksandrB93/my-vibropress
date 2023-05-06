@@ -6,8 +6,10 @@ export const LS_SELECTED_THEME_MODE_KEY = "themeMode";
 export const LS_ALL_THEMES_KEY = "themeMode";
 
 const baseColors = {
-  accent: "#ff8900",
+  accent: "#f68759",
+  backgroundAccent:'#fc935c',
   accentSecondary: "#4c4c4c",
+  mobileMenuBackground: '#2c3a43a6',
 
   backgfoundMenuTablet: "#c7c7c7",
   darkGradientMenu: "linear-gradient(to bottom right, #4c4c4c, #4c4c4c)",
@@ -15,6 +17,8 @@ const baseColors = {
     "radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)",
   footerBackground: `linear-gradient(0deg, #8399a2 0%, #eef2f3 100%)`,
   headerBackground: `linear-gradient(45deg, hsla(228, 17%, 53%, 1) 0%, hsla(229, 28%, 88%, 1) 100%);`,
+  sliderBackground: `linear-gradient(180deg, #b3cdd1 0%, #9fa4c4 74%);
+  `,
   black: "#000",
   white: "#fff",
 
@@ -46,6 +50,9 @@ export const theme = {
     headerBackground: baseColors.headerBackground,
     footerBackground: baseColors.footerBackground,
     accentedTextLight: baseColors.accent,
+    backgroundAccent:baseColors.backgroundAccent,
+    sliderBackground:baseColors.sliderBackground,
+    mobileMenuBackground:baseColors.mobileMenuBackground,
     
     backgroundHomeAccent: baseColors.backgroundHomeAccent,
     backgroundHomeSecond: baseColors.backgroundHomeSecond,
