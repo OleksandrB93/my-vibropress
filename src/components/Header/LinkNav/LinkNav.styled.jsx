@@ -74,6 +74,8 @@ export const StyledDropdownItem = styled.li`
   font-size: 15px;
   transition: all 0.2s ease-in-out;
   white-space: nowrap;
+  cursor: pointer;
+
 
   @media (max-width: 480.98px) {
     font-size: 12px;

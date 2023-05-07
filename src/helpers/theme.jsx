@@ -15,9 +15,9 @@ const baseColors = {
   darkGradientMenu: "linear-gradient(to bottom right, #4c4c4c, #4c4c4c)",
   backgroundSliderMenu:
     "radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)",
-  footerBackground: `linear-gradient(0deg, #8399a2 0%, #eef2f3 100%)`,
+  footerBackground: `linear-gradient(0deg, #8399a2 0%, #f0f6ee 100%)`,
   headerBackground: `linear-gradient(45deg, hsla(228, 17%, 53%, 1) 0%, hsla(229, 28%, 88%, 1) 100%);`,
-  sliderBackground: `linear-gradient(180deg, #b3cdd1 0%, #9fa4c4 74%);
+  sliderBackground: `linear-gradient(180deg, #b3cdd1 0%, #d0d1dc 74%);
   `,
   black: "#000",
   white: "#fff",
