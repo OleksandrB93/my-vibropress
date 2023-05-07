@@ -5,12 +5,11 @@ export const NavContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  overflow-y: auto;
+  overflow: auto;
 
   text-transform: uppercase;
   font-style: italic;
   @media (max-width: 888.98px) {
-    overflow: auto;
     position: absolute;
     top: 0;
     right: 0;
@@ -19,7 +18,7 @@ export const NavContainer = styled.div`
     flex-direction: column;
     justify-content: flex-start;
 
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
     padding: 30px;
 
