@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const AboutContainer = styled.div`
   @media (min-width: 320px) {
@@ -13,6 +13,7 @@ export const AboutContainer = styled.div`
   @media (min-width: 1200px) {
     margin: 30px 150px;
   }
+  padding-top: 140px;
 `;
 
 export const AboutTitel = styled.h2`

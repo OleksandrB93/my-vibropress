@@ -158,7 +158,7 @@ export default function Production5() {
             process.env.PUBLIC_URL + '/imgs/production/vibropress/product54.jpg'
           }
           alt="Вібропрес PGV-120U "
-          width={400}
+          width='350'
         />
         <div
           style={{ textAlign: 'start', paddingLeft: '50px', fontSize: '18px' }}

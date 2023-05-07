@@ -15,6 +15,8 @@ export const ProductionContainer = styled.div`
   @media (min-width: 1200px) {
     margin: 30px 150px;
   }
+  padding-top: 140px;
+  
 `;
 
 export const ProductionTitel = styled.h2`
@@ -148,4 +150,11 @@ export const Tbody = styled.tbody`
 
 export const FlexBlock = styled.div`
   display: flex;
+
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
 `

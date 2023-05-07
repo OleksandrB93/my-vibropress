@@ -13,6 +13,8 @@ export const ServiceContainer = styled.div`
   @media (min-width: 1200px) {
     margin: 30px 150px;
   }
+  padding-top: 140px;
+
 `;
 
 export const ServiceTitel = styled.h2`

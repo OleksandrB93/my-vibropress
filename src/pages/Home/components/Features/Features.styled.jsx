@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
 export const FeaturesContainer = styled.div`
-  margin-top: 70px;
   padding: 60px 0;
   display: grid;
   grid-gap: 30px;

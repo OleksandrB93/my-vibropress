@@ -160,6 +160,10 @@ export const LinkContainer = styled(NavLink)`
   margin-right: 10px;
   transition: padding 250ms ease-out;
 
+  &:last-of-type {
+    margin-right: 0;
+  }
+
   @media (max-width: 888.98px) {
     width: 200px;
     padding: 20px 0px;
