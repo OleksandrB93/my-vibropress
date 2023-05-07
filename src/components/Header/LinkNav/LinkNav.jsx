@@ -205,6 +205,7 @@ export default function LinkNav({ handleToggle, isOpen }) {
           )}
           {selectedDropdownItem !== droptransport && isHovering && (
             <DropSlider
+            onMouseEnter={handleMouseEnter}
               handleToggle={handleToggle}
               handleMouseLeave={handleMouseLeave}
               data={selectedDropdownItem}

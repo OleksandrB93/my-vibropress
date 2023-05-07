@@ -13,7 +13,6 @@ export const NavContainer = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 100;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -42,8 +41,12 @@ export const DropList = styled.ul`
   color: ${(p) => p.theme.colors.accentedTextDark};
   background-color: ${(p) => p.theme.colors.link};
   backdrop-filter: blur(5px);
-  border-radius: 9px;
+  border-radius: 5px;
   z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
+          rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+          rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      
 
   @media (max-width: 480.98px) {
     width: 100vw;
@@ -64,17 +67,30 @@ export const DropList = styled.ul`
 `;
 
 export const StyledDropdownItem = styled.li`
-  margin: 0 5px;
-  padding: 10px 5px;
+  /* margin: 0 5px; */
+  padding: 15px 10px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 
   font-size: 15px;
-  transition: all 0.2s ease-in-out;
+  font-weight: 700;
   white-space: nowrap;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
+  /* background-color: ${(p) => p.theme.colors.accent}; */
+  border-right: 1px solid ${(p) => p.theme.colors.accent};
+  color: ${(p) => p.theme.colors.accent};
+  :hover{
+    transform: scale(1.1);
+    background-color: ${(p) => p.theme.colors.accent};
+    color: ${(p) => p.theme.colors.black};
+  }
 
+  
+  &:last-of-type {
+    border-right: none;
+  }
 
   @media (max-width: 480.98px) {
     font-size: 12px;
@@ -179,7 +195,7 @@ export const LinkContainer = styled(NavLink)`
     color: ${(p) => p.theme.colors.accent};
     &:before {
       transform: scaleX(0.8);
-      box-shadow: 0px -1px 70px 1px black;
+      box-shadow: 0px -1px 70px 1px ${p=>p.theme.colors.accent};
     }
   }
 
@@ -225,7 +241,7 @@ export const LinkContainerProd = styled.div`
     position: absolute;
     left: 0%;
     bottom: 0px;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid ${p=>p.theme.colors.accent};
     transition: transform 250ms ease-out;
     transform-origin: center;
     transform: scaleX(0);

@@ -2,7 +2,7 @@ import styled from "@emotion/styled/macro";
 
 export const SliderContainer = styled.div`
   position: absolute;
-  top: 100%;
+  top: 98%;
   left: 0;
   height: 500px;
   width: 100vw;
@@ -14,7 +14,7 @@ export const SliderContainer = styled.div`
   padding-top: 70px;
   padding-left: 10px;
   padding-right: 10px;
-  z-index: 100;
+  box-shadow: inset 0 0 20px -5px rgba(0, 0, 0, 0.5);
 
   @media (max-width: 480.98px) {
     top: 0;
@@ -76,9 +76,8 @@ export const SliderContainer = styled.div`
       opacity: 0.5;
       border-radius: 50%;
       margin-right: 10px;
-
       @media (max-width: 888.98px) {
-        margin-bottom: 45px;
+        margin-bottom: 55px;
       }
 
       &.swiper-pagination-bullet-active {
@@ -135,5 +134,4 @@ export const DropSliderContainer = styled.div`
   position: fixed;
   top: 100%;
   left: 0;
-  z-index: 998;
 `;
