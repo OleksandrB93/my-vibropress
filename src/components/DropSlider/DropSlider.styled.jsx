@@ -22,10 +22,10 @@ export const SliderContainer = styled.div`
     height: 100vh;
     width: 100vw;
   }
-  @media (max-width: 888.98px) {
+  @media (min-width: 481px) and (max-width: 888.98px) {
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 120vh;
     width: 100vw;
     padding-top: 110px;
   }
@@ -77,7 +77,10 @@ export const SliderContainer = styled.div`
       border-radius: 50%;
       margin-right: 10px;
       @media (max-width: 888.98px) {
-        margin-bottom: 55px;
+        margin-bottom: 80px;
+      }
+      @media (min-width: 481px) and (max-width: 888.98px) {
+       display: none;
       }
 
       &.swiper-pagination-bullet-active {
@@ -89,16 +92,24 @@ export const SliderContainer = styled.div`
     text-decoration: none !important;
   }
 
-  p {
+  button {
     margin-top: 20px;
-    font-weight: 700;
-    padding: 10px 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 10px;
+    
     border-radius: 5px;
-    font-size: 14px;
-    text-align: center;
     color: ${(p) => p.theme.colors.accent};
     background-color: ${(p) => p.theme.colors.link};
-    text-decoration: none !important;
+    width: 100%;
+    
+    p{
+      text-align: center;
+      font-weight: 700;
+      font-size: 16px;
+
+    }
     @media (max-width: 480.98px) {
       margin-top: 40px;
     }

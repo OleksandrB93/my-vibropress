@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import LinkNav from "components/Header/LinkNav/LinkNav";
-import { StyledBurger } from "./MobileMenu.styled";
+import { BoxBurger, StyledBurger } from "./MobileMenu.styled";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,14 +15,14 @@ const MobileMenu = () => {
   };
 
   return (
-    <div>
+    <BoxBurger isOpen={isOpen}>
       <StyledBurger open={isOpen} onClick={handleToggle}>
         <span />
         <span />
         <span />
       </StyledBurger>
       {isOpen && <LinkNav handleToggle={handleToggle} isOpen={isOpen} />}
-    </div>
+    </BoxBurger>
   );
 };
 

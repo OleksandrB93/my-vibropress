@@ -1,4 +1,18 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
+
+export const BoxBurger = styled.div`
+  @media (max-width: 888.98px) {
+    ${(props) =>
+      props.isOpen &&
+      `
+      position: absolute;
+      padding:15px;
+      top: 0;
+      right: 0;
+      z-index: 9999;
+    `}
+  }
+`;
 
 export const StyledBurger = styled.button`
   position: relative;
@@ -11,7 +25,7 @@ export const StyledBurger = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
-  margin-left:auto;
+  margin-left: auto;
   z-index: 9999;
 
   &:focus {
@@ -29,15 +43,15 @@ export const StyledBurger = styled.button`
   }
 
   span:nth-of-type(1) {
-    transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
+    transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
   }
 
   span:nth-of-type(2) {
-    opacity: ${({ open }) => (open ? '0' : '1')};
-    transform: ${({ open }) => (open ? 'translateX(-20px)' : 'translateX(0)')};
+    opacity: ${({ open }) => (open ? "0" : "1")};
+    transform: ${({ open }) => (open ? "translateX(-20px)" : "translateX(0)")};
   }
 
   span:nth-of-type(3) {
-    transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
+    transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
   }
 `;

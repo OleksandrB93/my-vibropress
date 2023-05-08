@@ -51,7 +51,16 @@ export default function DropSlider({ handleMouseLeave, data, handleToggle }) {
                       }
                     }}
                   />
-                  <p>{dropSlide.text}</p>
+                  <button
+                    onClick={() => {
+                      handleMouseLeave();
+                      if (window.innerWidth <= 889) {
+                        handleToggle();
+                      }
+                    }}
+                  >
+                    <p>{dropSlide.text}</p>
+                  </button>
                 </Link>
               </SwiperSlide>
             </SliderSlide>
@@ -92,7 +101,16 @@ export function DropSliderTrans({
                       }
                     }}
                   />
-                  <p>{dropSlide.text}</p>
+                  <button
+                    onClick={() => {
+                      handleMouseLeave();
+                      if (window.innerWidth <= 889) {
+                        handleToggle();
+                      }
+                    }}
+                  >
+                    <p>{dropSlide.text}</p>
+                  </button>
                 </Link>
               </SwiperSlide>
             </SliderSlide>

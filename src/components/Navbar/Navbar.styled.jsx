@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 export const NavbarContainer = styled.header`
   backdrop-filter: blur(10px);
+  background-color: #00000016;
   /* background: ${(p) => p.theme.colors.headerBackground}; */
   position: fixed;
   top: 0;
