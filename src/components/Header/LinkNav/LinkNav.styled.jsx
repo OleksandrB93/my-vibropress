@@ -103,7 +103,7 @@ export const StyledDropdownItem = styled.li`
         background: ${(p) => p.theme.colors.accent};
         transform: translateY(25%);
         transition: all 0.25s ease-in-out;
-        box-shadow: ${p=>p.theme.shadow};
+        box-shadow: ${(p) => p.theme.shadow};
       }
 
       p {
@@ -114,7 +114,7 @@ export const StyledDropdownItem = styled.li`
         font-size: 16px;
         color: #2e3940;
         background-color: ${(p) => p.theme.colors.accent};
-        box-shadow: ${p=>p.theme.shadow};
+        box-shadow: ${(p) => p.theme.shadow};
 
         opacity: 1;
         transform: translate(-50%, 0%);
@@ -169,7 +169,7 @@ export const LinkContainer = styled(NavLink)`
   padding: ${({ isscrolled }) => (isscrolled ? "19px" : "40px")} 5px;
   opacity: 1;
   margin-right: 10px;
-  transition: padding 250ms ease-out;
+  transition: all 250ms ease-out;
 
   &:last-of-type {
     margin-right: 0;
@@ -188,6 +188,7 @@ export const LinkContainer = styled(NavLink)`
   &:hover:not(.active),
   &:focus-visible:not(.active) {
     color: ${(p) => p.theme.colors.accent};
+
     &:before {
       transform: scaleX(0.8);
       box-shadow: 0px -1px 70px 1px ${(p) => p.theme.colors.accent};
@@ -198,7 +199,7 @@ export const LinkContainer = styled(NavLink)`
     color: ${(p) => p.theme.colors.accent};
     background-color: ${(p) => p.theme.colors.link};
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 0px;
+    border-radius: 5px;
   }
   &.active:before {
     border-color: ${(p) => p.theme.colors.accent};
@@ -240,10 +241,6 @@ export const LinkContainerProd = styled.div`
     transition: transform 250ms ease-out;
     transform-origin: center;
     transform: scaleX(0);
-
-    @media (max-width: 888.98px) {
-      left: -8%;
-    }
   }
 
   &:hover:not(.active),

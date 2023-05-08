@@ -97,7 +97,7 @@ export const SliderContainer = styled.div`
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px 10px;
+    padding: 10px 0px;
     
     border-radius: 5px;
     color: ${(p) => p.theme.colors.accent};
@@ -105,6 +105,7 @@ export const SliderContainer = styled.div`
     width: 100%;
     
     p{
+      font-style: italic;
       text-align: center;
       font-weight: 700;
       font-size: 16px;

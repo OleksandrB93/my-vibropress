@@ -31,7 +31,7 @@ export const FeaturesItem = styled.div`
   align-items: center;
   padding: 10px;
   width: 350px;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: #ffffff8e;
   backdrop-filter: blur(5px);
 

@@ -11,7 +11,7 @@ export const SlideText = styled.p`
   font-weight: bold;
   background-color: #00000094;
   padding: 5px 20px;
-  border-radius: 15px;
+  border-radius: 5px;
   text-align: center;
   opacity: ${props => (props.isActive ? '1' : '0')};
   transition: transform 0.8s ease-out, opacity 0.3s ease-out;
@@ -37,7 +37,7 @@ export const SlideImg = styled.img`
   position: relative;
   width: 75%;
   height: 65vh;
-  border-radius: 15px;
+  border-radius: 5px;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
 

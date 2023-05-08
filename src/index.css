@@ -50,11 +50,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #8badb2; /* цвет зоны отслеживания */
+  background: #2c3a43a6; /* цвет зоны отслеживания */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #ff8000; /* цвет бегунка */
-  border-radius: 15px; /* округлось бегунка */
+  background-color: #fc935c; /* цвет бегунка */
+  border-radius: 3px; /* округлось бегунка */
   border: 1px solid #000000b9; /*отступ вокруг бегунка*/
 }

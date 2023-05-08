@@ -22,8 +22,8 @@ export const CooperationSlide = styled(SwiperSlide)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${p=>p.theme.colors.backgroundHomeSecond};
-  border-radius: 15px;
+  background-color: #d4d2d255;
+  border-radius: 5px;
   height: 200px;
 
   p {
