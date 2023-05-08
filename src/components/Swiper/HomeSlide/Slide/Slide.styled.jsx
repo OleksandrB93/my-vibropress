@@ -17,10 +17,14 @@ export const SlideText = styled.p`
   transition: transform 0.8s ease-out, opacity 0.3s ease-out;
 
   
-  @media (max-width: 768px) {
-    font-size: 10px;
-    line-height: 36px;
+  @media (max-width: 480px) {
+    font-size: 12px;
+    line-height: 20px;
   }
+  @media (min-width: 481px) and (max-width: 888.98px) {
+    font-size: 18px;
+    line-height: 25px;
+      }
 `;
 
 export const SlideItem = styled.div`
