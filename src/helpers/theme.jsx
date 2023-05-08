@@ -7,9 +7,9 @@ export const LS_ALL_THEMES_KEY = "themeMode";
 
 const baseColors = {
   accent: "#f68759",
-  backgroundAccent:'#fc935c',
+  backgroundAccent: "#fc935c",
   accentSecondary: "#4c4c4c",
-  mobileMenuBackground: '#2c3a43a6',
+  mobileMenuBackground: "#2c3a43a6",
 
   backgfoundMenuTablet: "#c7c7c7",
   darkGradientMenu: "linear-gradient(to bottom right, #4c4c4c, #4c4c4c)",
@@ -22,8 +22,8 @@ const baseColors = {
   black: "#000",
   white: "#fff",
 
-  backgroundHomeAccent: '#02749ea7',
-  backgroundHomeSecond: '#d7d7d7',
+  backgroundHomeAccent: "#02749ea7",
+  backgroundHomeSecond: "#d7d7d7",
 
   accentSuccess: "#3cbc81",
   accentError: "#e2001a",
@@ -35,6 +35,10 @@ const baseColors = {
 };
 
 export const theme = {
+  shadow: `rgba(0, 0, 0, 0.09) 0px 2px 1px,
+  rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+  rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px`,
+
   borders: {
     //   primaryBtn: '2px solid',
     //   inputModal: '1px solid',
@@ -50,10 +54,10 @@ export const theme = {
     headerBackground: baseColors.headerBackground,
     footerBackground: baseColors.footerBackground,
     accentedTextLight: baseColors.accent,
-    backgroundAccent:baseColors.backgroundAccent,
-    sliderBackground:baseColors.sliderBackground,
-    mobileMenuBackground:baseColors.mobileMenuBackground,
-    
+    backgroundAccent: baseColors.backgroundAccent,
+    sliderBackground: baseColors.sliderBackground,
+    mobileMenuBackground: baseColors.mobileMenuBackground,
+
     backgroundHomeAccent: baseColors.backgroundHomeAccent,
     backgroundHomeSecond: baseColors.backgroundHomeSecond,
     //   heading: baseColors.darkMain,

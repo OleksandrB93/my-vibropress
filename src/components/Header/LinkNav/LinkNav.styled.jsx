@@ -43,10 +43,9 @@ export const DropList = styled.ul`
   backdrop-filter: blur(5px);
   border-radius: 5px;
   z-index: 999;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
-          rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
-          rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-      
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
   @media (max-width: 480.98px) {
     width: 100vw;
@@ -67,7 +66,6 @@ export const DropList = styled.ul`
 `;
 
 export const StyledDropdownItem = styled.li`
-  /* margin: 0 5px; */
   padding: 15px 10px;
   display: flex;
   justify-content: space-evenly;
@@ -78,16 +76,7 @@ export const StyledDropdownItem = styled.li`
   white-space: nowrap;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-  /* background-color: ${(p) => p.theme.colors.accent}; */
-  border-right: 1px solid ${(p) => p.theme.colors.accent};
-  color: ${(p) => p.theme.colors.accent};
-  :hover{
-    transform: scale(1.1);
-    background-color: ${(p) => p.theme.colors.accent};
-    color: ${(p) => p.theme.colors.black};
-  }
 
-  
   &:last-of-type {
     border-right: none;
   }
@@ -104,19 +93,17 @@ export const StyledDropdownItem = styled.li`
       border-radius: 5%;
       fill: ${(p) => p.theme.colors.accentSecondary};
       background: ${(p) => p.theme.colors.backgroundAccent};
-      transition: all 0.3s ease-in-out;
+      transition: all 0.25s ease-in-out;
     }
     &.active {
       span {
         padding: 10px;
         border-radius: 30%;
-        fill: ${(p) => p.theme.colors.black};
+        fill: #2e3940;
         background: ${(p) => p.theme.colors.accent};
         transform: translateY(25%);
-        transition: all 0.3s ease-in-out;
-        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
-          rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
-          rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        transition: all 0.25s ease-in-out;
+        box-shadow: ${p=>p.theme.shadow};
       }
 
       p {
@@ -125,15 +112,13 @@ export const StyledDropdownItem = styled.li`
         border-radius: 10px;
         padding: 3px 12px;
         font-size: 16px;
-        color: ${(p) => p.theme.colors.black};
-        background-color:  ${(p) => p.theme.colors.accent};
-        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
-          rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
-          rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        color: #2e3940;
+        background-color: ${(p) => p.theme.colors.accent};
+        box-shadow: ${p=>p.theme.shadow};
 
         opacity: 1;
         transform: translate(-50%, 0%);
-        transition: transform 0.4s ease-in-out;
+        transition: transform 0.25s ease-in-out;
       }
     }
 
@@ -144,12 +129,12 @@ export const StyledDropdownItem = styled.li`
       left: 50%;
       opacity: 0;
       transform: translate(-50%, 10%);
-      transition: transform 0.4s ease-in-out;
+      transition: transform 0.35s ease-in-out;
     }
   }
   @media (max-width: 888.98px) {
     font-size: 12px;
-    margin: 0 3px;
+
     padding: 5px;
   }
 
@@ -160,13 +145,23 @@ export const StyledDropdownItem = styled.li`
   &:last-of-type {
     margin-right: 0;
   }
+
+  @media (min-width: 481px) {
+    border-right: 1px solid ${(p) => p.theme.colors.accent};
+    color: ${(p) => p.theme.colors.accent};
+    :hover {
+      transform: scale(1.1);
+      background-color: ${(p) => p.theme.colors.accent};
+      color: ${(p) => p.theme.colors.black};
+    }
+  }
 `;
 
 export const LinkContainer = styled(NavLink)`
   width: 100px;
   display: flex;
   justify-content: center;
-  position: relative;
+  /* position: relative; */
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
@@ -195,7 +190,7 @@ export const LinkContainer = styled(NavLink)`
     color: ${(p) => p.theme.colors.accent};
     &:before {
       transform: scaleX(0.8);
-      box-shadow: 0px -1px 70px 1px ${p=>p.theme.colors.accent};
+      box-shadow: 0px -1px 70px 1px ${(p) => p.theme.colors.accent};
     }
   }
 
@@ -241,7 +236,7 @@ export const LinkContainerProd = styled.div`
     position: absolute;
     left: 0%;
     bottom: 0px;
-    border-bottom: 3px solid ${p=>p.theme.colors.accent};
+    border-bottom: 3px solid ${(p) => p.theme.colors.accent};
     transition: transform 250ms ease-out;
     transform-origin: center;
     transform: scaleX(0);

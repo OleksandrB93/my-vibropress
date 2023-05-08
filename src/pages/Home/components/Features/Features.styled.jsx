@@ -32,9 +32,12 @@ export const FeaturesItem = styled.div`
   padding: 10px;
   width: 350px;
   border-radius: 15px;
-  background-color: ${p=>p.theme.colors.backgroundHomeSecond};
+  background-color: #ffffff8e;
+  backdrop-filter: blur(5px);
+
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
   transition: all 0.3s ease-in-out;
+
   @media (max-width: 768px) {
     width: 180px;
   }

@@ -85,23 +85,25 @@ export const SliderContainer = styled.div`
       }
     }
   }
+  a {
+    text-decoration: none !important;
+  }
 
   p {
     margin-top: 20px;
-
+    font-weight: 700;
     padding: 10px 15px;
-    border-radius: 15px;
+    border-radius: 5px;
     font-size: 14px;
     text-align: center;
-    text-decoration: none;
-    color: ${(p) => p.theme.colors.black};
-    background-color: ${(p) => p.theme.colors.white};
-
+    color: ${(p) => p.theme.colors.accent};
+    background-color: ${(p) => p.theme.colors.link};
+    text-decoration: none !important;
     @media (max-width: 480.98px) {
       margin-top: 40px;
     }
     @media (max-width: 888.98px) {
-      font-size: 10px;
+      font-size: 12px;
     }
   }
 `;
@@ -116,7 +118,7 @@ export const SlideImg = styled.img`
   width: 100%;
   height: 250px;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transform: scale(1);
   transition: transform 0.2s ease-in-out;
