@@ -5,6 +5,7 @@ export default function Logo({ isScrolled }) {
   return (
     <LogoContainer isScrolled={isScrolled}>
       <Link to="/">
+        {/* <img src={process.env.PUBLIC_URL + '/imgs/logo2.png'} alt="logo" /> */}
         <img src={process.env.PUBLIC_URL + '/imgs/logo.png'} alt="logo" />
       </Link>
     </LogoContainer>
