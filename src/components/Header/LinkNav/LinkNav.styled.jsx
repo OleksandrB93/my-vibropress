@@ -99,7 +99,7 @@ export const StyledDropdownItem = styled.li`
       span {
         padding: 10px;
         border-radius: 30%;
-        fill: #2e3940;
+        fill: ${(p) => p.theme.colors.accentSecondary};
         background: ${(p) => p.theme.colors.accent};
         transform: translateY(25%);
         transition: all 0.25s ease-in-out;
@@ -112,7 +112,7 @@ export const StyledDropdownItem = styled.li`
         border-radius: 10px;
         padding: 3px 12px;
         font-size: 16px;
-        color: #2e3940;
+        color: ${(p) => p.theme.colors.accentSecondary};
         background-color: ${(p) => p.theme.colors.accent};
         box-shadow: ${(p) => p.theme.shadow};
 
@@ -262,3 +262,13 @@ export const LinkContainerProd = styled.div`
     border-color: ${(p) => p.theme.colors.accent};
   }
 `;
+
+export const Backdrop = styled.div`
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0000008f;
+  backdrop-filter: blur(5px); */
+  `;

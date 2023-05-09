@@ -8,7 +8,9 @@ export const LS_ALL_THEMES_KEY = "themeMode";
 const baseColors = {
   accent: "#f68759",
   backgroundAccent: "#fc935c",
-  accentSecondary: "#4c4c4c",
+  accentSecondary: "#2c3a43ed",
+  // accentSecondary: "black",
+
   mobileMenuBackground: "#2c3a43a6",
 
   backgfoundMenuTablet: "#c7c7c7",

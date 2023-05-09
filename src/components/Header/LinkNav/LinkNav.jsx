@@ -17,6 +17,7 @@ import droppress from "../../../data/droppress.json";
 import droptransport from "../../../data/droptransport.json";
 import drophelp from "../../../data/drophelp.json";
 
+
 const Menus = [
   {
     name: "Вібропреси",
@@ -111,7 +112,6 @@ export default function LinkNav({ handleToggle, isOpen }) {
   useEffect(() => {
     setActiveItem(0);
   }, []);
-  
 
   const handleMouseEnter = () => {
     setIsHovering(true);
@@ -123,8 +123,7 @@ export default function LinkNav({ handleToggle, isOpen }) {
   const handleDropdownItemClick = (dis, i) => {
     setSelectedDropdownItem(dis);
     setActiveItem(i);
-  }
-
+  };
 
   return (
     <>
@@ -153,33 +152,35 @@ export default function LinkNav({ handleToggle, isOpen }) {
             <p>Продукція</p>
           </LinkContainerProd>
           {isHovering && (
-            <DropList>
-              <StyledDropdownItem
-                onMouseEnter={() => setSelectedDropdownItem(Menus[0].dis)}
-              >
-                <p>Вібропреси</p>
-              </StyledDropdownItem>
-              <StyledDropdownItem
-                onMouseEnter={() => setSelectedDropdownItem(Menus[1].dis)}
-              >
-                <p>Бетонозмішувальні комплекси</p>
-              </StyledDropdownItem>
-              <StyledDropdownItem
-                onMouseEnter={() => setSelectedDropdownItem(Menus[2].dis)}
-              >
-                <p>Прес-форми</p>
-              </StyledDropdownItem>
-              <StyledDropdownItem
-                onMouseEnter={() => setSelectedDropdownItem(Menus[3].dis)}
-              >
-                <p>Транспортна група</p>
-              </StyledDropdownItem>
-              <StyledDropdownItem
-                onMouseEnter={() => setSelectedDropdownItem(Menus[4].dis)}
-              >
-                <p>Допоміжне обладнання</p>
-              </StyledDropdownItem>
-            </DropList>
+            <>
+              <DropList>
+                <StyledDropdownItem
+                  onMouseEnter={() => setSelectedDropdownItem(Menus[0].dis)}
+                >
+                  <p>Вібропреси</p>
+                </StyledDropdownItem>
+                <StyledDropdownItem
+                  onMouseEnter={() => setSelectedDropdownItem(Menus[1].dis)}
+                >
+                  <p>Бетонозмішувальні комплекси</p>
+                </StyledDropdownItem>
+                <StyledDropdownItem
+                  onMouseEnter={() => setSelectedDropdownItem(Menus[2].dis)}
+                >
+                  <p>Прес-форми</p>
+                </StyledDropdownItem>
+                <StyledDropdownItem
+                  onMouseEnter={() => setSelectedDropdownItem(Menus[3].dis)}
+                >
+                  <p>Транспортна група</p>
+                </StyledDropdownItem>
+                <StyledDropdownItem
+                  onMouseEnter={() => setSelectedDropdownItem(Menus[4].dis)}
+                >
+                  <p>Допоміжне обладнання</p>
+                </StyledDropdownItem>
+              </DropList>
+            </>
           )}
           {isHovering && maxMobile && (
             <DropList>
@@ -195,7 +196,6 @@ export default function LinkNav({ handleToggle, isOpen }) {
               ))}
             </DropList>
           )}
-
           {selectedDropdownItem === droptransport && isHovering && (
             <DropSliderTrans
               handleToggle={handleToggle}
@@ -205,7 +205,7 @@ export default function LinkNav({ handleToggle, isOpen }) {
           )}
           {selectedDropdownItem !== droptransport && isHovering && (
             <DropSlider
-            onMouseEnter={handleMouseEnter}
+              onMouseEnter={handleMouseEnter}
               handleToggle={handleToggle}
               handleMouseLeave={handleMouseLeave}
               data={selectedDropdownItem}

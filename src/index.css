@@ -58,3 +58,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 3px; /* округлось бегунка */
   border: 1px solid #000000b9; /*отступ вокруг бегунка*/
 }
+
+.swiper-slide{
+  padding-bottom: 5px;
+}

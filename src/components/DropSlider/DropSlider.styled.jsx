@@ -97,12 +97,20 @@ export const SliderContainer = styled.div`
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px 0px;
+    padding: 10px 10px;
     
     border-radius: 5px;
     color: ${(p) => p.theme.colors.accent};
     background-color: ${(p) => p.theme.colors.link};
     width: 100%;
+    border: none;
+    transition: all 250ms ease-in-out;
+    :hover{
+      background-color: ${(p) => p.theme.colors.accent};
+      color: ${(p) => p.theme.colors.link};
+      box-shadow: inset 0 0 10px 3px ${(p) => p.theme.colors.link};
+      transform: translateY(2px);
+    }
     
     p{
       font-style: italic;
@@ -119,8 +127,6 @@ export const SliderContainer = styled.div`
     }
   }
 `;
-
-export const Backdrop = styled.div``;
 
 export const SliderSlide = styled.div``;
 

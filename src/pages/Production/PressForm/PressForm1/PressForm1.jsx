@@ -54,6 +54,7 @@ export default function PressForm1() {
 
         <PtoductionImg>
           <img
+              width='300'
             src={
               process.env.PUBLIC_URL + '/imgs/production/press-form/press1.jpg'
             }
